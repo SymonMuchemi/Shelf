@@ -115,3 +115,22 @@ body{
         color: #DF7D3A;
     }
 }
+@media only screen and (max-width: 600px){
+    body{
+        display: grid;
+        margin: 0;
+        justify-content: start;
+        align-items: start;
+    }
+    .form-contaner{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        border-radius: 0;
+    }
+    .email_and_password{
+        & input{
+            width: 23.5em;
+        }
+    }
+}
