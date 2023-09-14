@@ -60,6 +60,11 @@ body{
         line-height: 100%;
         padding: 8px;
     }
+    & .button:hover{
+        cursor: pointer;
+        border-color: #4D4D4D;
+        background-color: #4D4D4D;
+    }
     .user_options{
         margin-top: 20px;
         display: flex;
@@ -115,6 +120,47 @@ body{
         color: #DF7D3A;
     }
 }
+form{
+    margin-top: 3rem;
+}
+.OTP{
+    margin-top:50px;
+    padding:0 50px;
+    display:flex;
+    flex-direction:auto;
+    justify-content:space-around;
+    align-content:space-between;
+    gap: 10px;
+}
+.OTP_page_message{
+    font-size: 100%;
+    font-style: normal;
+    font-weight: 600;
+    color: #4D4D4D;
+}
+.OTP_code{
+    background-color:transparent;
+    text-align: center;
+    line-height: 10px;
+    font-size: 20px;
+    outline: none;
+    width: 50px;
+    transition: all .2s ease-in-out;
+    border-radius: 1px;
+    border-top:none;
+    border-left:none;
+    border-right:none;
+    border-bottom:5px solid #4D4D4D;
+    margin-bottom:50px;
+        
+     &:focus {
+      border-bottom:5px solid #DF7D3A;
+     }
+        
+     &::selection {
+      background: transparent;
+     }
+  }
 @media only screen and (max-width: 600px){
     body{
         display: grid;
