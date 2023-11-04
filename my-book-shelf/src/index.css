@@ -1,7 +1,9 @@
 body{
-    background-image: url(Assets/vector1.svg);
+    background-image: url(../public/images/vector1.svg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-color: #FFF;
+    overflow: hidden;
     display: grid;
     place-items: center;
     min-height: 100vh;
@@ -9,9 +11,9 @@ body{
     font-size: 16px;
     font-style: normal;
 }
-.form-contaner{
+.box{
     width: 20rem;
-    height: 84vh;
+    height: 82vh;
     /* margin-top: 10%; */
     border-radius: 10px;
     background: #FFF;
@@ -20,13 +22,6 @@ body{
     align-items: center;
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.25);
 
-    & img{
-        margin: auto;
-        width: 110px;
-        height: 65px;
-        text-align: center;
-        padding-bottom: 20px;
-    }
     & .image, .check_image{
         text-align: center;
     }
@@ -65,6 +60,33 @@ body{
         font-weight: 600;
         line-height: 128.523%;
     }
+    & .remember_forget{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: center;
+        
+
+        & .checkbox{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            width: 55%;
+            gap: 5px;
+
+            & input{
+                width: 20px;
+                height: 20px;
+            }
+        }
+        & a{
+            color: #4D4D4D;
+        }
+        & a:hover{
+            color: #DF7D3A;
+        }
+    }
     & label{
         color: #4D4D4D;
         font-weight: 600;
@@ -88,7 +110,7 @@ body{
         background-color: #4D4D4D;
     }
     .user_options{
-        margin-top: 20px;
+        margin-top: 10px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -98,7 +120,7 @@ body{
             text-align: right;
             font-weight: 400;
             line-height: 100%; /* 16px */
-            text-decoration-line: none;
+            text-decoration-line: underline;
         }
         & a:hover{
             color: #DF7D3A;
@@ -112,38 +134,56 @@ body{
     width: 100%;
     line-height: 20px;
 
-    & input{
+}
+
+form{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    & input[type="email"],input[type="text"], input[type="password"]{
         border-radius: 8px;
+        padding-left: 10px;
         border: 1px solid #DCD9D9;
         background: #FFF;
-        width: 98%;
+        width: 96%;
         height: 30px;
         margin-bottom: 10px;
     }
-}
-.remember_forgot{
-    margin-top: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
     & input[type="checkbox"]{
         accent-color: #DF7D3A;
         color: #FFF;
     }
-    & a{
-        color: #4D4D4D;
-        text-align: right;
-        font-weight: 400;
-        line-height: 100%; /* 16px */
-        text-decoration-line: none;
+    /* Add this CSS to your component's stylesheet or global CSS file */
+    
+    /* Style for the password input field and eye icons */
+    & .password-input {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      position: relative;
     }
-    & a:hover{
-        color: #DF7D3A;
+    
+    & .password-input input {
+      width: 100%;
+      padding-right: 35px; /* Ensure space for the eye icons */
     }
-}
-form{
-    margin-top: 3rem;
+    
+    & .eye-icon {
+      position: relative;
+      /* right: 0; Adjust this value for icon placement */
+      cursor: pointer;
+      right: 5px;
+      font-size: 1.2rem;
+      color: #888; /* Eye icon color */
+      transition: color 0.3s;
+    }
+    
+    & .eye-icon:hover {
+      color: #333; /* Eye icon color on hover */
+    }
+    
 }
 .OTP{
     margin-top:50px;
@@ -183,6 +223,23 @@ form{
       background: transparent;
      }
   }
+.imageContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & img{
+        width: 110px;
+        height: 65px;
+        text-align: center;
+        align-items: center;
+        padding-bottom: 10px;
+    }
+    /* margin-left: 35%; */
+}
+
+
+
 @media only screen and (max-width: 600px){
     body{
         display: grid;
