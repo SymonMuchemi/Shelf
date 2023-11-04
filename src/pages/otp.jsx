@@ -20,7 +20,7 @@ const OtpComponent = () => {
         <div className='imageContainer'>
             <img src={bookShelfLogo} alt="logo" className='image'/>		
         </div>
-        <h2>Verification</h2>
+        <h2>Verification!</h2>
         <p className="message">Check your email for OTP</p>
 
         <p className='message_dark'>Enter OTP here</p>
