@@ -149,6 +149,7 @@ form{
         background: #FFF;
         width: 96%;
         height: 30px;
+        margin-top: 5px;
         margin-bottom: 10px;
     }
     & input[type="checkbox"]{
@@ -169,11 +170,15 @@ form{
       width: 100%;
       padding-right: 35px; /* Ensure space for the eye icons */
     }
+    .label-icon{
+        position: relative;
+    }
     
     & .eye-icon {
-      position: relative;
+      position: absolute;
       /* right: 0; Adjust this value for icon placement */
       cursor: pointer;
+      bottom: 15px;
       right: 5px;
       font-size: 1.2rem;
       color: #888; /* Eye icon color */
