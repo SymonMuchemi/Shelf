@@ -142,6 +142,29 @@ form{
     flex-direction: column;
     gap: 5px;
 
+
+    & .otp-inputs{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 30px;
+        width: 100%;
+
+        & .otp-input{
+            width: 20px;
+            border: 0;
+            border-bottom: 4px solid #4D4D4D;
+            border-radius: 0;
+            font-weight: 300;
+            font-size: larger;
+        }
+        & .otp-input:hover, .otp-input:focus{
+            border-bottom: 4px solid #DF7D3A;
+            outline: none;
+            caret-color: #DF7D3A;
+            caret-shape: block;
+        }
+    }
     & input[type="email"],input[type="text"], input[type="password"]{
         border-radius: 8px;
         padding-left: 10px;
@@ -152,6 +175,7 @@ form{
         margin-top: 5px;
         margin-bottom: 10px;
     }
+
     & input[type="checkbox"]{
         accent-color: #DF7D3A;
         color: #FFF;
@@ -243,6 +267,15 @@ form{
     /* margin-left: 35%; */
 }
 
+.otp-inputs {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .otp-input {
+    width: 10%;
+    text-align: center;
+  }
 
 
 @media only screen and (max-width: 600px){

@@ -1,19 +1,20 @@
 // App.js
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import SignUp from './pages/sign-up';
 import Welcome from './pages/welcome';
 import SignIn from './pages/sign-in';
+import Otp from './pages/otp';
+import OtpComponent from './pages/otp';
 
 function App() {
   return (
-    <Router>
-      <Switch>
-        <Route path="/signup" component={SignUp} />
-        <Route path="/" component={Welcome} />
-        <Route path="/signin" component={SignIn} />
-      </Switch>
-    </Router>
+    <Routes>
+      <Route path="/" element={<Welcome />} />
+      <Route path="/sign-up" element={<SignUp />} />
+      <Route path="/otp" element={<OtpComponent />} />
+      <Route path="/sign-in" element={<SignIn />} />
+    </Routes>
   );
 }
 
