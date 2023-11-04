@@ -1,6 +1,8 @@
 import bookShelfLogo from "./shelf-logo.png";
 import { useState } from "react";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
+
 
 function SignUp() {
   document.title = "Sign Up";
@@ -8,6 +10,12 @@ function SignUp() {
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
+
+  const navigate = useNavigate()
+
+  const moveToOtp = () => {
+    navigate('/otp')
+  }
 
   return (
     <div className="box">
@@ -67,7 +75,10 @@ function SignUp() {
           </div>
           <a href="/">Forget Password?</a>
         </div>
-        <input type="submit" value="Sign In" className="button" />
+        <input type="submit"
+                value="Sign In" 
+                className="button" 
+                onClick={moveToOtp}/>
         <div className="user_options">
           <p>
             New user? <a href="#">Register Here</a>
