@@ -76,7 +76,7 @@ function SignUp() {
           <a href="/">Forget Password?</a>
         </div>
         <input type="submit"
-                value="Sign In" 
+                value="Register"
                 className="button" 
                 onClick={moveToOtp}/>
         <div className="user_options">
